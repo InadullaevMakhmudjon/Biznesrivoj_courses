@@ -1,8 +1,5 @@
-var express = require('express');
-var router = express.Router();
+import courses from './courses';
 
-router.get('/api', function(req, res) {
-  res.status(200).json({ message: 'All courses route' });
-});
-
-module.exports = router;
+export default (app) => {
+  app.use('/courses', courses);
+};
